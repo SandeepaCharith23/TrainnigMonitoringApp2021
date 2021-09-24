@@ -99,7 +99,7 @@ class _HomepageState extends State<Homepage> {
               SizedBox(height: 20,),
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: 200,
+                height: 100,
                
                 decoration: BoxDecoration(
                   color: Colors.amber,
