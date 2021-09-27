@@ -99,10 +99,17 @@ class _HomepageState extends State<Homepage> {
               SizedBox(height: 20,),
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: 100,
+                height: 200,
                
                 decoration: BoxDecoration(
-                  color: Colors.amber,
+                  gradient:LinearGradient(colors:[
+                    customcolors.AppColor.gradientFirst.withOpacity(0.8),
+                    customcolors.AppColor.gradientSecond.withOpacity(0.9),
+                    
+                  ],
+                  begin: Alignment.bottomLeft,
+                  end: Alignment.centerRight,
+                  ),
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(10),
                     bottomLeft: Radius.circular(10),
@@ -110,8 +117,115 @@ class _HomepageState extends State<Homepage> {
                     bottomRight: Radius.circular(10),
 
                   ),
+                  boxShadow: [
+                    BoxShadow(
+                      offset: Offset(10, 10),
+                      blurRadius: 20,
+                      color: customcolors.AppColor.gradientSecond.withOpacity(0.2),
+                    ),
+                  ],
                 ),
 
+
+              child: Container(
+                padding: const EdgeInsets.only(
+                  left: 20,
+                  top: 15,
+                  right: 20,
+                  bottom: 5,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>
+                  [
+                    Text(
+                      "Next Workout for You",
+                      style: TextStyle(
+                      fontSize: 20,
+                      color: customcolors.AppColor.homePageContainerTextSmall,
+                      fontWeight: FontWeight.w700,
+
+                      ), 
+                    ),
+                    SizedBox(
+                      height: 10,
+                      ),
+                    Text(
+                      "Push Ups",
+                      style: TextStyle(
+                      fontSize: 25,
+                      color: customcolors.AppColor.homePageContainerTextSmall,
+                      fontWeight: FontWeight.w700,
+
+                      ), 
+                    ),
+
+                    SizedBox(
+                      height: 10,
+                      ),
+
+                    Text(
+                      "Chest Workout",
+                      style: TextStyle(
+                      fontSize: 25,
+                      color: customcolors.AppColor.homePageContainerTextSmall,
+                      fontWeight: FontWeight.w700,
+
+                      ), 
+                    ),
+                    SizedBox(height: 10,),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: <Widget>
+                      [
+                        Icon(
+                          Icons.alarm_add_rounded,
+                          size: 20,
+                          color: customcolors.AppColor.homePageContainerTextSmall,
+                        ),
+
+                        SizedBox(width: 10,),
+
+                      Text(
+                      "60 min",
+                      style: TextStyle(
+                      fontSize: 15,
+                      color: customcolors.AppColor.homePageContainerTextSmall,
+                      fontWeight: FontWeight.w700,
+
+                      ), 
+                      ),
+                      Expanded(
+                      child: Container(),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(60),
+                          boxShadow: [
+                            BoxShadow(
+                              color: customcolors.AppColor.gradientFirst,
+                              blurRadius: 5,
+                              offset: Offset(5, 5),
+                            ),
+                          ],
+
+                        ),
+                        child: Icon(
+                         Icons.play_circle,
+                         size: 60,
+                         color: Colors.white,
+                    ),
+                      ),
+                       
+                      ],
+                    ),
+
+                    
+
+                    
+                  ],
+                ),
+              ),
               ),
             ],
           ),
