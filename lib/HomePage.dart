@@ -2,6 +2,8 @@ import 'dart:convert';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:trainnig_app_2021/vedio_info.dart';
 import 'colors.dart' as customcolors;
 
 
@@ -104,10 +106,15 @@ class _HomepageState extends State<Homepage> {
                   ),
 
                   SizedBox(width: 5.0,),
-                  Icon(
-                    Icons.arrow_forward,
-                    size: 20.0,
-                    color: customcolors.AppColor.homePageIcons,
+                  InkWell(
+                    onTap: (){
+                      Get.to(()=>VedioInfo());
+                    },
+                    child: Icon(
+                      Icons.arrow_forward,
+                      size: 20.0,
+                      color: customcolors.AppColor.homePageIcons,
+                    ),
                   ),
 
                 ],
